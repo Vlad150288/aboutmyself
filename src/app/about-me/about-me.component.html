@@ -1,0 +1,20 @@
+<div class="info">
+  <h1>{{ name }}</h1> 
+  <img [src]="userPhoto" alt="User Photo">
+  
+  <div class="infoTxt">
+    <h3>INFORMATION</h3>
+    <p>Date of birth: {{ dateOfBirth }}</p>
+    <p>Gender: {{ gender }}</p>
+    <p>Marital Status: {{ maritalStatus }}</p>
+    <p>Education: {{ education }}</p>
+    <h3>CONTACTS</h3>
+    <p>{{ phone }}</p>
+    <p>{{ mail }}</p>
+    <p>{{ city }}, {{ country }}</p>
+    <h3>DESIRED SALARY</h3>
+    <p>{{ desiredSalary | currency:'UAH ':'symbol':'1.2-2' }}</p>
+  </div>
+</div>
+ 
+

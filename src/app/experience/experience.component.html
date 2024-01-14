@@ -1,0 +1,58 @@
+<div class="experience">
+  <h1>{{ profession }}</h1>
+  
+  <div class="header">
+    <h2>EXPERIENCE</h2>
+    <label>
+      <input type="radio" name="options" [value]="'option1'" (change)="onOptionChange('option1')" [checked]="selectedOption === 'option1'">
+      First job
+    </label>
+    <label>
+      <input type="radio" name="options" [value]="'option2'" (change)="onOptionChange('option2')" [checked]="selectedOption === 'option2'">
+      Second job
+    </label>
+    <label>
+      <input type="radio" name="options" [value]="'option3'" (change)="onOptionChange('option3')" [checked]="selectedOption === 'option3'">
+      Third job
+    </label>
+  </div>
+  
+  <div [ngSwitch]="selectedOption">
+    <div *ngSwitchCase="'option1'">
+      <div>        
+        <ul>
+          <li *ngFor="let job of experienceList1">
+            <h3>{{ job.position }}</h3>
+            <p>{{ job.company }}, {{ job.location }}</p>
+            <p>{{ job.startDate }} - {{ job.endDate }}</p>
+            <p>{{ job.description }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div *ngSwitchCase="'option2'">
+      <div>        
+        <ul>
+          <li *ngFor="let job of experienceList2">
+            <h3>{{ job.position }}</h3>
+            <p>{{ job.company }}, {{ job.location }}</p>
+            <p>{{ job.startDate }} - {{ job.endDate }}</p>
+            <p>{{ job.description }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div *ngSwitchCase="'option3'">
+      <div>        
+        <ul>
+          <li *ngFor="let job of experienceList3">
+            <h3>{{ job.position }}</h3>
+            <p>{{ job.company }}, {{ job.location }}</p>
+            <p>{{ job.startDate }} - {{ job.endDate }}</p>
+            <p>{{ job.description }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

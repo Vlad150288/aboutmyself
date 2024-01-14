@@ -1,0 +1,31 @@
+.container {
+    width: 600px;
+    min-height: 516px;
+    padding: 6px 20px;
+    background-color: white;
+}
+
+.skills {
+    display: flex;
+    width: 100%;
+}
+
+.skills div {
+    width: 50%;
+}
+
+button {
+    background-color: rgb(16, 157, 159);
+    border: 0;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.bio {
+    padding-left: 20px;
+    padding-right: 20px;
+}

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="skills">
+        <div>
+          <h2>SKILLS</h2>
+          <ul>
+              <li *ngFor="let skill of skills">{{ skill }}</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>KNOWLEDGES</h2>
+          <ul>
+              <li *ngFor="let knowledge of knowledges">{{ knowledge }}</li>
+          </ul>
+        </div>
+    </div>
+
+    <h2>CERTIFICATES</h2>
+    <ul>
+      <li *ngFor="let certificate of certificates">{{ certificate }}</li>
+    </ul>
+    <button (click)="toggleBio()">{{ showBio ? 'HIDE BIOGRAPHY' : 'SHOW BIOGRAPHY' }}</button>
+    <div *ngIf="showBio">
+      <p class="bio">{{ bio }}</p>
+    </div>
+</div>
+  
